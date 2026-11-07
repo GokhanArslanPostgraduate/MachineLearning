@@ -110,3 +110,8 @@ Ara raporda saptanan bu platform bariyerini aşmak ve dış test F1-skorlarını
 
 * **Yasin Gökhan Arslan** - [GitHub](https://github.com/GokhanArslanPostgraduate)
 * **Ders Bilgisi:** 503001508 – Makine Öğrenmesi ve Anomali Tespiti
+
+## 📑 Atıf (Citation)
+Bu çalışmayı akademik araştırmalarınızda kullanırsanız lütfen aşağıdaki şekilde atıfta bulununuz:
+```text
+Arslan, Y. G. (2026). Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırmasında Platformlar Arası Keşifsel Analiz. Eskişehir Osmangazi Üniversitesi, Makine Öğrenmesi ve Anomali Tespiti Dersi Dönem Projesi. GitHub: GokhanArslanPostgraduate/MachineLearning
