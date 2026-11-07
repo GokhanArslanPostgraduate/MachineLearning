@@ -239,19 +239,43 @@ def main():
         plt.close()
 
         X_train_sc, X_val_sc, top_200_pos = pipeline_feature_selection_and_scaling(X_log, y_all, X_log)
+        
+        # PCA Modelinin kurulması ve varyans oranlarının hesaplanması
         pca = PCA(n_components=2)
         X_pca = pca.fit_transform(X_train_sc)
+        exp_var = pca.explained_variance_ratio_ * 100  # Yüzdelik formata çevirme
+        
+        # Terminale varyans oranlarını basma
+        print(f"   ➔ {name} PCA Varyans Oranları -> PC1: %{exp_var[0]:.2f} | PC2: %{exp_var[1]:.2f} | Toplam: %{sum(exp_var):.2f}")
+        
+        # t-SNE Modelinin kurulması
         tsne = TSNE(n_components=2, perplexity=min(15, max(5, len(X_log)//4)), random_state=SEED_VALUE)
         X_tsne = tsne.fit_transform(X_train_sc)
         
+        # Grafiklerin Çizilmesi
         fig, axes_dim = plt.subplots(1, 2, figsize=(15, 6))
         colors, target_names, markers = {0: 'royalblue', 1: 'crimson'}, {0: 'ALL', 1: 'AML'}, {0: 'o', 1: 'X'}
+        
         for lbl in np.unique(y_all):
             if lbl in target_names:
                 mask = (y_all == lbl)
                 axes_dim[0].scatter(X_pca[mask, 0], X_pca[mask, 1], c=colors[lbl], label=target_names[lbl], marker=markers[lbl], s=100, edgecolors='black', alpha=0.8)
                 axes_dim[1].scatter(X_tsne[mask, 0], X_tsne[mask, 1], c=colors[lbl], label=target_names[lbl], marker=markers[lbl], s=100, edgecolors='black', alpha=0.8)
-        axes_dim[0].set_title("PCA"); axes_dim[1].set_title("t-SNE")
+        
+        # PCA Grafiği Başlık ve Dinamik Eksen Etiketleri
+        axes_dim[0].set_title(f"{name} PCA Analizi", fontweight='bold')
+        axes_dim[0].set_xlabel(f"Temel Bileşen 1 (Açıklanan Varyans: %{exp_var[0]:.1f})")
+        axes_dim[0].set_ylabel(f"Temel Bileşen 2 (Açıklanan Varyans: %{exp_var[1]:.1f})")
+        axes_dim[0].legend()
+        axes_dim[0].grid(True, linestyle='--', alpha=0.5)
+        
+        # t-SNE Grafiği Başlık ve Eksen Etiketleri
+        axes_dim[1].set_title(f"{name} t-SNE Analizi", fontweight='bold')
+        axes_dim[1].set_xlabel("t-SNE Boyut 1")
+        axes_dim[1].set_ylabel("t-SNE Boyut 2")
+        axes_dim[1].legend()
+        axes_dim[1].grid(True, linestyle='--', alpha=0.5)
+        
         plt.tight_layout()
         plt.savefig(os.path.join(OUTPUT_DIR, f'{name}_eda_2_dimension_reduction_optimized.png'), dpi=300)
         plt.close()
@@ -280,6 +304,7 @@ def main():
         plot_tree(dt_model, feature_names=X_log.iloc[:, top_200_pos].columns.tolist(), class_names=['ALL', 'AML'], filled=True, rounded=True, fontsize=10)
         plt.savefig(os.path.join(OUTPUT_DIR, f'{name}_decision_tree_output.png'), dpi=300)
         plt.close()
+        
 
     draw_statistical_summary_graphic(stats_summary)
     
