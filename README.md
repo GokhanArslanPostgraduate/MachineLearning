@@ -41,6 +41,12 @@ Projedeki veri bölme (train/test split) ve model eğitim süreçlerinde bu sabi
 
 ## 📈 Deneysel Sonuçlar
 
+### 📊 Boyut İndirgeme ve Kümeleme Grafikleri
+
+| PCA Analizi | t-SNE Görselleştirme |
+|---|---|
+| ![PCA](Outputs/pca_plot.png) | ![t-SNE](Outputs/tsne_plot.png) |
+
 ### 1. İç Doğrulama Performansı (Golub Kohortu - 5-Fold CV)
 * **Random Forest:** %97.2 Accuracy | %96.0 F1-Score | 1.000 AUC
 * **Logistic Regression:** %97.2 Accuracy | %96.0 F1-Score | 0.984 AUC
