@@ -22,6 +22,8 @@ OUTPUT_DIR = "outputs"
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
+SEED_VALUE = 42
+
 def load_all_datasets():
     print("[1/2] Veri setleri hafızaya yükleniyor...")
     datasets = {}
@@ -142,13 +144,13 @@ def evaluate_models(datasets):
     X_golub, y_golub = datasets['Golub']
     
     models = {
-        'Decision Tree (Modül)': DecisionTreeClassifier(max_depth=3, random_state=42),
-        'Logistic Regression': LogisticRegression(class_weight='balanced', random_state=42),
-        'Random Forest': RandomForestClassifier(n_estimators=100, class_weight='balanced', random_state=42),
-        'Support Vector Machine': CalibratedClassifierCV(SVC(class_weight='balanced', random_state=42), ensemble=False)
+        'Decision Tree (Modül)': DecisionTreeClassifier(max_depth=3, random_state=SEED_VALUE),
+        'Logistic Regression': LogisticRegression(class_weight='balanced', random_state=SEED_VALUE),
+        'Random Forest': RandomForestClassifier(n_estimators=100, class_weight='balanced', random_state=SEED_VALUE),
+        'Support Vector Machine': CalibratedClassifierCV(SVC(class_weight='balanced', random_state=SEED_VALUE), ensemble=False)
     }
     
-    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED_VALUE)
     cv_results = {m_name: [] for m_name in models.keys()}
     
     for fold, (train_idx, val_idx) in enumerate(skf.split(X_golub, y_golub)):
@@ -239,7 +241,7 @@ def main():
         X_train_sc, X_val_sc, top_200_pos = pipeline_feature_selection_and_scaling(X_log, y_all, X_log)
         pca = PCA(n_components=2)
         X_pca = pca.fit_transform(X_train_sc)
-        tsne = TSNE(n_components=2, perplexity=min(15, max(5, len(X_log)//4)), random_state=42)
+        tsne = TSNE(n_components=2, perplexity=min(15, max(5, len(X_log)//4)), random_state=SEED_VALUE)
         X_tsne = tsne.fit_transform(X_train_sc)
         
         fig, axes_dim = plt.subplots(1, 2, figsize=(15, 6))
@@ -272,7 +274,7 @@ def main():
         except:
             pass
 
-        dt_model = DecisionTreeClassifier(max_depth=3, random_state=42)
+        dt_model = DecisionTreeClassifier(max_depth=3, random_state=SEED_VALUE)
         dt_model.fit(X_train_sc, y_all)
         plt.figure(figsize=(16, 8))
         plot_tree(dt_model, feature_names=X_log.iloc[:, top_200_pos].columns.tolist(), class_names=['ALL', 'AML'], filled=True, rounded=True, fontsize=10)
