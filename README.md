@@ -43,9 +43,14 @@ Projedeki veri bölme (train/test split) ve model eğitim süreçlerinde bu sabi
 
 ### 📊 Boyut İndirgeme ve Kümeleme Grafikleri
 
-| PCA Analizi | t-SNE Görselleştirme |
-|---|---|
-| ![PCA](Outputs/pca_plot.png) | ![t-SNE](Outputs/tsne_plot.png) |
+#### 1. Golub Kohortu (Eğitim & İç Doğrulama Seti)
+![Golub Kohortu PCA ve t-SNE Analizi](Outputs/Golub_eda_2_dimension_reduction_optimized.png)
+
+#### 2. GSE6891_GSE26713 (Bağımsız Dış Test Seti 1)
+![GSE6891 PCA ve t-SNE Analizi](Outputs/GSE6891_GSE26713_eda_2_dimension_reduction_optimized.png)
+
+#### 3. GSE13159 - MILE (Bağımsız Dış Test Seti 2)
+![GSE13159 MILE PCA ve t-SNE Analizi](Outputs/GSE13159_eda_2_dimension_reduction_optimized.png)
 
 ### 1. İç Doğrulama Performansı (Golub Kohortu - 5-Fold CV)
 * **Random Forest:** %97.2 Accuracy | %96.0 F1-Score | 1.000 AUC
