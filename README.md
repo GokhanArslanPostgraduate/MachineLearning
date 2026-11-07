@@ -1,7 +1,7 @@
 # Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırmasında Platformlar Arası Keşifsel Analiz
 
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
-[![License: Public Domain](https://img.shields.io/badge/License-Public Domain-green)](https://nih.gov)
+[![License: Public Domain](https://img.shields.io/badge/License-Public_Domain-green)](https://nih.gov)
 
 Bu proje, yüksek boyutlu biyolojik verilerde (mikrodizi) makine öğrenmesi modellerinin sınırlarını, **veri sızıntısız (data leakage-free)** öznitelik seçimi süreçlerini ve farklı jenerasyon cihaz platformları arasındaki **teknik yığın etkisini (batch effect)** sistematik olarak sorgulayan uçtan uca tekrarlanabilir bir iş akışıdır.
 
