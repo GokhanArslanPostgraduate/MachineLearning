@@ -98,7 +98,7 @@ Projedeki veri bölme (train/test split) ve model eğitim süreçlerinde bu sabi
 
 3. Analiz boru hattını (pipeline) çalıştırın:
    ```bash
-   python Src/main.py
+   python Src/eda.py
    ```
 
 ---
