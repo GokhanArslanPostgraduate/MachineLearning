@@ -9,7 +9,7 @@ Bu proje, yüksek boyutlu biyolojik verilerde (mikrodizi) makine öğrenmesi mod
 
 Klinik pratikte löseminin **Akut Lenfoblastik Lösemi (ALL)** ve **Akut Miyeloid Lösemi (AML)** olarak doğru alt tiplendirilmesi, uygulanacak kemoterapi rejimlerinin tamamen farklı olması sebebiyle hayati öneme sahiptir. Bu çalışmada, mikrodizi (microarray) gen ekspresyon verileri kullanılarak ALL ve AML alt tiplerinin sınıflandırılmasına yönelik uçtan uca, veri sızıntısız ve tekrarlanabilir bir makine öğrenmesi iş akışı geliştirilmiştir.
 
-Çalışmanın ana motivasyonu, modellerin tek bir kohorttaki içsel başarısıyla yetinmeyip, farklı laboratuvarlar ve jenerasyon cihaz platformları (Affymetrix Hu6800 vs. HG U133 P2) arasındaki **teknik varyasyonları (batch effect) ve platformlar arası genellenebilirliği** sistematik olarak araştırmaktır. 
+Çalışmanın ana motivasyonu, modellerin tek bir kohorttaki içsel başarısıyla yetinmeyip, farklı laboratuvarlar ve jenerasyon cihaz platformları (Affymetrix Hu6800 vs. HG U133 P2) arasındaki **batch etkisini ve platformlar arası genellenebilirliği** sistematik olarak araştırmaktır. 
 
 - **Yüksek Boyutlu Veri Yönetimi:** Gen sayısının örnek sayısından çok daha fazla olduğu ($p \gg n$) ve aşırı öğrenme (overfitting) riski barındıran 6.263 gen probuna sahip Golub veri seti üzerinde çalışılmıştır.
 - **Platformlar Arası Entegrasyon:** Farklı mikrodizi platformlarındaki prob anotasyonu ve gen isimlendirme farklılıkları, R programlama dili ve Bioconductor paketleri kullanılarak çözülmüş ve ortak gen havuzu başarıyla eşleştirilmiştir.
@@ -76,10 +76,10 @@ Projede kullanılan tüm veri setleri, biyolojik bağlamları, örnek boyutları
 ![GSE13159 MILE PCA ve t-SNE Analizi](Outputs/GSE13159_PCA_TSNE.png)
 
 ### 1. İç Doğrulama Performansı (Golub Kohortu - 5-Fold CV)
-* **Random Forest:** %91.2 Accuracy | %90.1 F1(Marco) | 0.996 ROC-AUC
-* **Logistic Regression:** %97.1 Accuracy | %96.9 F1(Marco) | 0.993 ROC-AUC
-* **Support Vector Machine:** %97.1 Accuracy | %96.9 F1(Marco) | 0.993 ROC-AUC
-* **Decision Tree (En Zayıf):** %91.2 Accuracy | %91.0 F1(Marco) | 0.912 ROC-AUC
+* **Random Forest:** %91.2 Accuracy | %90.1 F1(Macro) | 0.996 ROC-AUC
+* **Logistic Regression:** %97.1 Accuracy | %96.9 F1(Macro) | 0.993 ROC-AUC
+* **Support Vector Machine:** %97.1 Accuracy | %96.9 F1(Macro) | 0.993 ROC-AUC
+* **Decision Tree (En Zayıf):** %91.2 Accuracy | %91.0 F1(Macro) | 0.912 ROC-AUC
 
 ---
 
@@ -120,7 +120,7 @@ Projede kullanılan tüm veri setleri, biyolojik bağlamları, örnek boyutları
 
 ## 🚀 Final Dönemi Yol Haritası (Gelecek Çalışmalar)
 
-Ara raporda saptanan platform bariyerini ve dış testlerdeki "körleşme anomalisini" aşarak bağımsız kohortlardaki tahmin başarısını stabilize etmek amacıyla şu adımlar entegre edilmektedir:
+Ara raporda saptanan platform bariyerini aşarak bağımsız kohortlardaki tahmin başarısını stabilize etmek amacıyla şu adımlar entegre edilmektedir:
 
 1. **R ve Bioconductor Tabanlı Dinamik Annotasyon:** Projenin R ayağında `AnnotationDbi` paketleri (`hu6800.db` ve `hgu133plus2.db`) ile hazırlanan prob-gen sembolü eşleştirme tabloları Python hattına dinamik olarak bağlanacaktır. Böylece platformlar arası ortak gen havuzunun kritik sınırın üzerine çıkarılması güvenceye alınacaktır.
 2. **Dağılımsal Heterojenlik ve Batch Düzeltmesi:** Sinyal yoğunluğu ve EDA analizlerinde tespit edilen platformlar arası ölçek farklılıklarını (MAS5 / RMA normalizasyon kaymaları) ve olası laboratuvar kaynaklı teknik yığın etkilerini gidermek amacıyla boru hattına `ComBat` düzeltme mimarisi dahil edilecektir.
