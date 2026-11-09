@@ -148,4 +148,4 @@ Ara raporda saptanan platform bariyerini aşarak bağımsız kohortlardaki tahmi
 ## 📑 Atıf (Citation)
 Bu çalışmayı akademik araştırmalarınızda kullanırsanız lütfen aşağıdaki şekilde atıfta bulununuz:
 ```text
-Arslan, Y. G. (2026). Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırmasında Platformlar Arası Keşifsel Analiz. Eskişehir Osmangazi Üniversitesi, Makine Öğrenmesi ve Anomali Tespiti Dersi Dönem Projesi. GitHub: GokhanArslanPostgraduate/MachineLearning
+Arslan, Y. G. (2026). GGen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırması: Platformlar Arası Keşifsel Analiz ve Makine Öğrenmesi Yaklaşımı. Eskişehir Osmangazi Üniversitesi, Makine Öğrenmesi ve Anomali Tespiti Dersi Dönem Projesi. GitHub: GokhanArslanPostgraduate/MachineLearning
