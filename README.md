@@ -143,7 +143,7 @@ Ara raporda saptanan platform bariyerini aşarak bağımsız kohortlardaki tahmi
 ## ✍️ Yazar & İletişim
 
 * **Yasin Gökhan Arslan** - [GitHub](https://github.com/GokhanArslanPostgraduate)
-* **Ders Bilgisi:** 503001508 – Makine Öğrenmesi ve Anomali Tespiti
+* **Linkedin:** [Linkedin](https://www.linkedin.com/in/yasin-gökhan-arslan-35394870/)
 
 ## 📑 Atıf (Citation)
 Bu çalışmayı akademik araştırmalarınızda kullanırsanız lütfen aşağıdaki şekilde atıfta bulununuz:
