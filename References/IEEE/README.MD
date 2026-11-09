@@ -5,6 +5,7 @@ Bu dizin, **ALL (Akut Lenfoblastik Lösemi)** ve **AML (Akut Myeloid Lösemi)** 
 ## 🔍 Arama Kriterleri
 - **Arama Sorgusu:** `ALL / AML`
 - **Yıl Aralığı:** 2021 - 2026
+- **Veri Tabanı:** IEEE Xplore Digital Library
 
 ## 📊 Dahil Etme ve Dışlama Ölçütleri (Inclusion/Exclusion Criteria)
 
