@@ -1,4 +1,4 @@
-# Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırmasında Platformlar Arası Keşifsel Analiz
+# Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırması: Platformlar Arası Keşifsel Analiz ve Makine Öğrenmesi Yaklaşımı
 
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
 [![License: Public Domain](https://img.shields.io/badge/License-Public_Domain-green)](https://nih.gov)
@@ -148,4 +148,4 @@ Ara raporda saptanan platform bariyerini aşarak bağımsız kohortlardaki tahmi
 ## 📑 Atıf (Citation)
 Bu çalışmayı akademik araştırmalarınızda kullanırsanız lütfen aşağıdaki şekilde atıfta bulununuz:
 ```text
-Arslan, Y. G. (2026). GGen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırması: Platformlar Arası Keşifsel Analiz ve Makine Öğrenmesi Yaklaşımı. Eskişehir Osmangazi Üniversitesi, Makine Öğrenmesi ve Anomali Tespiti Dersi Dönem Projesi. GitHub: GokhanArslanPostgraduate/MachineLearning
+Arslan, Y. G. (2026). Gen İfadesi Mikrodizi Verilerinden Lösemi Alt Tipi Sınıflandırması: Platformlar Arası Keşifsel Analiz ve Makine Öğrenmesi Yaklaşımı. Eskişehir Osmangazi Üniversitesi, Makine Öğrenmesi ve Anomali Tespiti Dersi Dönem Projesi. GitHub: GokhanArslanPostgraduate/MachineLearning
