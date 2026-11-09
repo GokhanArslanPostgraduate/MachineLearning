@@ -1,6 +1,6 @@
-# IEEE Akademik Referansları
+# Science Direct Akademik Referansları
 
-Bu dizin, **Leukemia (Lösemi)** konusunda IEEE üzerinde yapılan literatür taramalarını içermektedir.
+Bu dizin, **Leukemia (Lösemi)** konusunda Science Direct üzerinde yapılan literatür taramalarını içermektedir.
 
 ## 🔍 Arama Kriterleri
 - **Arama Sorgusu:** `Leukemia`
