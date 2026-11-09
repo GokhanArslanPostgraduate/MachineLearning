@@ -59,13 +59,13 @@ Projede kullanılan tüm veri setleri, biyolojik bağlamları, örnek boyutları
 ### 🔀 Sınıf Dağılımı
 
 #### 1. Golub 
-![Golub](Outputs/Golub_classes.png)
+<img src="Outputs/Golub_classes.png" alt="Golub" width="400">
 
 #### 2. GSE6891_GSE26713 
-![GSE6891](Outputs/GSE6891_GSE26713_classes.png)
+<img src="Outputs/GSE6891_GSE26713_classes.png" alt="GSE6891" width="400">
 
 #### 3. GSE13159 - MILE 
-![GSE13159 MILE](Outputs/GSE13159_classes.png)
+<img src="Outputs/GSE6891_GSE26713_classes.png" alt="GSE6891" width="400">
 
 ### 🔄 Birleşik Dış Kohort Oluşturma Stratejisi
 * **Hastalık Dağılımı:** GSE6891 veri seti yoğun olarak AML örneklerini, GSE26713 veri seti ise pediatrik T-ALL örneklerini içerdiği için, her iki hastalık alt tipini dengeli bir şekilde kapsayan tamamen bağımsız bir dış değerlendirme gücü elde etmek amacıyla birleştirilmiştir.
