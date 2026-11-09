@@ -6,7 +6,7 @@ Bu dizin, **Leukemia (Lösemi)** konusunda Science Direct üzerinde yapılan lit
 - **Arama Sorgusu:** `Leukemia`
 - **Yıl Aralığı:** 2021 - 2026
 - **Konu Alanları:** Engineering
-- **Veri Tabanı:** IEEE Xplore Digital Library
+- **Veri Tabanı:** ScienceDirect (Elsevier)
 
 ## 📊 Dahil Etme ve Dışlama Ölçütleri (Inclusion/Exclusion Criteria)
 
