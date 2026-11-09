@@ -56,6 +56,17 @@ Projede kullanılan tüm veri setleri, biyolojik bağlamları, örnek boyutları
 | **GSE6891 & GSE26713**<br>*(Birleşik Dış Kohort)* | Affymetrix HG U133 P2 (GPL570) | 654 hasta, 54.675 gen | %17.9 ALL / %82.1 AML | Bağımsız Dış Değerlendirme Seti 1 (Dikey Birleşik) |
 | **GSE13159 (MILE)** | Affymetrix HG U133 P2 (GPL570) | 2.096 hasta, 54.675 gen | %35.8 ALL / %64.2 AML | Bağımsız Dış Değerlendirme Seti 2 |
 
+### 🔀 Sınıf Dağılımı
+
+#### 1. Golub 
+![Golub](Outputs/Golub_classes.png)
+
+#### 2. GSE6891_GSE26713 
+![GSE6891](Outputs/GSE6891_GSE26713_classes.png)
+
+#### 3. GSE13159 - MILE 
+![GSE13159 MILE](Outputs/GSE13159_classes.png)
+
 ### 🔄 Birleşik Dış Kohort Oluşturma Stratejisi
 * **Hastalık Dağılımı:** GSE6891 veri seti yoğun olarak AML örneklerini, GSE26713 veri seti ise pediatrik T-ALL örneklerini içerdiği için, her iki hastalık alt tipini dengeli bir şekilde kapsayan tamamen bağımsız bir dış değerlendirme gücü elde etmek amacıyla birleştirilmiştir.
 * **Dikey Birleştirme:** İki farklı çalışmadan gelen matrislerin öncelikle ortak gen kümesi (özellik uzayı) belirlenmiş, ardından yalnızca bu eşleşen genlerden oluşan özellik matrisleri örnekler bazında dikey (vertical row bind) olarak birleştirilerek **654 örnekli tek bir dev kohort** haline getirilmiştir.
@@ -75,7 +86,7 @@ Projede kullanılan tüm veri setleri, biyolojik bağlamları, örnek boyutları
 #### 3. GSE13159 - MILE (Bağımsız Dış Test Seti 2)
 ![GSE13159 MILE PCA ve t-SNE Analizi](Outputs/GSE13159_PCA_TSNE.png)
 
-### 1. İç Doğrulama Performansı (Golub Kohortu - 5-Fold CV)
+### 1. İç Doğrulama Performansı (Golub Kohortu)
 * **Random Forest:** %91.2 Accuracy | %90.1 F1(Macro) | 0.996 ROC-AUC
 * **Logistic Regression:** %97.1 Accuracy | %96.9 F1(Macro) | 0.993 ROC-AUC
 * **Support Vector Machine:** %97.1 Accuracy | %96.9 F1(Macro) | 0.993 ROC-AUC
